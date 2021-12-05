@@ -1,0 +1,6 @@
+
+.tmp
+*.file
+rm
+test
+test_rm_i.sh
