@@ -13,7 +13,7 @@ then
     echo -e "Usage: $0 direcotry-name file-size"
     exit
 fi
-
+ 
 dir=$1
 file_size=$2
 
@@ -23,8 +23,6 @@ then
     echo -e "$dir is not a directory."
     exit
 fi
-
-# for find: -size n[c --> bytes, w --> two-byte words, k --> kilobytes, M --> megabytes, G --> gigabytes]
 
 # Checking if 2nd parameter is a size that exists
 # pattern looks for atleast one digit and up, after that will look for
