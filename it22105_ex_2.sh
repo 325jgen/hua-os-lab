@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [ $# -ne 2 ]
+then
+    echo -e "Usage: $0 direcotry-name file-size"
+    exit
+fi
+
 declare -r tmp=".tmp"
 
 function del_tmp {
@@ -7,12 +13,6 @@ function del_tmp {
 }
 
 trap "del_tmp" EXIT SIGQUIT SIGKILL SIGTERM
-
-if [ $# -ne 2 ]
-then
-    echo -e "Usage: $0 direcotry-name file-size"
-    exit
-fi
  
 dir=$1
 file_size=$2

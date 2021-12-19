@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
 if [ $# -gt 0 ]
-then
-    echo -e "Usage: $0"
-    exit
+then echo -e "Usage: $0" exit
 fi
 
 OPTION=-1
@@ -13,7 +11,7 @@ do
     printf "1) Backup\n2) QR\n3) IP\n4) Exit\n"
     read -rp "Please select an option: " OPTION
 
-    while [[ $OPTION -lt 1 ]] || [[ $OPTION -gt 4 ]]
+    while [[ "$OPTION" -lt 1 ]] || [[ "$OPTION" -gt 4 ]]
     do
         printf "Input was not correct\n"
         read -rp "Please select an option: " OPTION
