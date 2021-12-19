@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 if [ $# -gt 0 ]
-then echo -e "Usage: $0" exit
+then
+    echo -e "Usage: $0" 
+    exit
 fi
 
 OPTION=-1

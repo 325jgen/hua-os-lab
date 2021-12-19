@@ -19,5 +19,5 @@ echo -e "Home directory size: $home_dir_size"
 home_dir_size=$(du $HOME | tail -1 | awk '{print $1}')
 
 # Using awk to calculcate the percentage. The `print` command prints a float with many decimal points, but thre's only the need of the integer part of it. That's why `printf` needs to be used for this. 
-home_usage=$(echo "scale=2; ($home_dir_size/$root_fs_size)*100" | bc -l) 
+home_usage=$(echo "($home_dir_size/$root_fs_size)*100" | bc -l) 
 echo -e "Home directory uses $home_usage% of /" 
